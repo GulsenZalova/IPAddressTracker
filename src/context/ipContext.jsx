@@ -7,13 +7,16 @@ export const IpContext=({children})=>{
     console.log(search)
     useEffect(()=>{
         setLoading(true)
-        fetch(`https://ipapi.co/${search}/json/`)
-        .then(res=>res.json())
-        .then(info=>{
-            setData(info)
-            console.log(info)
-            setLoading(false)
-        })
+        try {
+            const getData = async ()=>{
+                const response =await fetch(`https://ipapi.co/${search}/json/`) 
+                const info = await response.json()
+                setData(info)
+            }
+            getData()
+        } catch (error){
+            console.log(error)
+        }
     },[search])
     const values={
         data,

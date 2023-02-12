@@ -7,7 +7,7 @@ import arrow from "../images/icon-arrow.svg"
 function İpForm() {
     const [input,setİnput]=useState("")
     const {search,setSearch}=useContext(ipContext)
-    console.log(search)
+    // console.log(search)
     const handleChange=(e)=>{
         setİnput(e.target.value)
         console.log(e.target.value)
