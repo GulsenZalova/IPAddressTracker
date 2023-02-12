@@ -43,6 +43,11 @@ body{
   border: none;
   margin-left: -20px;
   background-color: hsl(0, 0%, 17%);
+  transition: all ease .3s;
+}
+
+.ip-form  button:hover{
+  background-color: hsl(0, 0%,50%);
 }
 .ip-info{
   position: absolute;

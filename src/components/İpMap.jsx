@@ -13,7 +13,7 @@ function İpMap() {
   {
      data && (
       <div className='ip-map'>
-        <MapContainer center={[data.latitude, data.longitude]} zoom={13} scrollWheelZoom={true} style={{ height: "500px", width: "100%" }}>
+        <MapContainer center={[data.latitude, data.longitude]} zoom={13} scrollWheelZoom={true} style={{ height: "100vh", width: "100%" }}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
