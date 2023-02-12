@@ -4,6 +4,7 @@ import { ipContext } from "../context/ipContext"
 import "leaflet/dist/leaflet.css"
 import icon from "./icon"
 import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet'
+import MarkerPosition from './MarkerPosition'
 function İpMap() {
   const { data } = useContext(ipContext)
   
@@ -18,8 +19,7 @@ function İpMap() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Marker icon={icon} position={[data.latitude, data.longitude]}>
-          </Marker>
+          <MarkerPosition  data={data}/>
         </MapContainer>
       </div>
      )
