@@ -28,6 +28,8 @@ function İpİnfo() {
             </li>
           </ul>
         </div>
+        ) || (
+          <h1></h1>
         )
       }
     </>
